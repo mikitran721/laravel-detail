@@ -28,6 +28,26 @@ Route::get('product', function () {
     return 'Product Screen';
 });
 
-// route dong - co tham so
-Route::get('news/{id}', function () {
+// route dong - co 1 tham so
+Route::get('news/{id}', function ($id) {
+    return "Bai viet so $id";
 });
+
+// Route co 2 params
+Route::get('news/{id}/category/{categoryId}', function ($id, $categoryId) {
+    return "Category $categoryId & Id $id";
+});
+
+//Route name
+Route::get('routenames', function () {
+    return 'Route name screen';
+})->name('rname');
+
+// Route name with params
+Route::get('rparam/{id}', function ($id) {
+    return "Route params: $id";
+})->name('rpa.show');
+
+Route::get('rparam/{id}/branch/{bid}', function ($id, $bid) {
+    return "Route params: $id - branch: $bid";
+})->name('rpa.branch');

@@ -19,3 +19,18 @@
         Route::get('news/{id}', function () {
         });
         ```
+
+-   `Route name`:
+
+        -   syntax:
+
+        ```php
+        <!-- config -->
+        Route::get('routenames', function () {
+            return 'Route name screen';
+        })->name('rname');
+
+       <!-- su dung -->
+
+        <a href="{{ route('rname') }}">Route name1</a>
+        ```
