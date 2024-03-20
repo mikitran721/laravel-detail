@@ -8,6 +8,8 @@
     -   URI -> Routes -> Controller (load/hiển thị view, model - tương tác DB)
     -   view(): hàm load view
 
+## ROUTES:
+
 #### Route Get:
 
 -   tất cả request đều qua route; Route sẽ điều hướng tới controller để thực thi tương ứng
@@ -52,3 +54,4 @@
     ```php
     Route::pattern('bid', '[0-9a-z]+');
     ```
+-   `Route with prefix`:
