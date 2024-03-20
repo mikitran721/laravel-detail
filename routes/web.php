@@ -43,10 +43,10 @@ Route::get('routenames', function () {
     return 'Route name screen';
 })->name('rname');
 
-// Route name with params
+// Route name with params and where
 Route::get('rparam/{id}', function ($id) {
     return "Route params: $id";
-})->name('rpa.show');
+})->name('rpa.show')->where('id', '[0-9a-z]+');
 
 Route::get('rparam/{id}/branch/{bid}', function ($id, $bid) {
     return "Route params: $id - branch: $bid";

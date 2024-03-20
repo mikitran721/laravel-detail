@@ -34,3 +34,21 @@
 
         <a href="{{ route('rname') }}">Route name1</a>
         ```
+
+-   `Route with params and where`:
+
+```php
+    // config
+    Route::get('rparam/{id}/branch/{bid}', function ($id, $bid) {
+        return "Route params: $id - branch: $bid";
+    })->name('rpa.branch')->where('id','[0-9a-zA-Z]+');
+
+    //call
+    <a href="{{ route('rpa.branch',['id'=>1, 'bid'=>2])}}">Branch - Route name pram 1</a>
+```
+
+-   `Route where global`: ap dung cho ca project
+    -   can config trong `RouteServiceProvider`:
+    ```php
+    Route::pattern('bid', '[0-9a-z]+');
+    ```
