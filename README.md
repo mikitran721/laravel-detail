@@ -10,6 +10,12 @@
 
 ## ROUTES:
 
+### Another Route:
+
+-   get, post, patch, delete, options, group
+-   Voi phuong thuc post, can co config `@csrf` trong view chua form de gui du lieu di
+-   can su dung config `@method('put')` voi phuong thuc trong form khac voi `post|get`
+
 #### Route Get:
 
 -   tất cả request đều qua route; Route sẽ điều hướng tới controller để thực thi tương ứng

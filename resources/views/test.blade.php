@@ -1,6 +1,10 @@
 <h1>Miki Tran</h1>
 <a href="/user">User</a> |
 <a href="/product">Product</a>
+<hr>
+<h3>Another Routes</h3>
+<a href="{{ route('admin.updateUser') }}">Create User</a>
+<hr>
 <ul>
     <li><a href="/news/1">Bai 1</a></li>
     <li><a href="/news/2/category/3">Bai 2</a></li>

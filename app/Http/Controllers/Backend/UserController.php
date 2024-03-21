@@ -11,4 +11,22 @@ class UserController extends Controller
     {
         return 'List User';
     }
+
+    public function create()
+    {
+        return view('backend.user.create');
+    }
+
+    //method for POST
+    public function store(Request $req)
+    {
+        dd(__METHOD__, $req->all());
+        return 'Store view - for POST';
+    }
+
+    //method for PUT/PATCH
+    public function update(Request $req)
+    {
+        dd(__METHOD__, $req->all());
+    }
 }

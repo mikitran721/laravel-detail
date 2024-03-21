@@ -24,6 +24,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('product', [ProductController::class, 'index'])->name('admin.product');
 
     Route::get('category', [CategoryController::class, 'index'])->name('admin.category');
+
+    //another routes
+    Route::get('user/create', [UserController::class, 'create'])->name('admin.createUser');
+    Route::post('user', [UserController::class, 'store'])->name('admin.storeUser');
+    Route::put('user', [UserController::class, 'update'])->name('admin.updateUser');
 });
 
 
