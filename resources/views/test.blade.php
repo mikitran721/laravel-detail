@@ -26,3 +26,11 @@
     <li><a href="{{ route('backend.product') }}">product management</a></li>
     <li><a href="{{ route('backend.category') }}">category management</a></li>
 </ul>
+
+<hr>
+<h3>Route with namespace</h3>
+<ul>
+    <li><a href="{{ route('admin.user') }}">User management</a></li>
+    <li><a href="{{ route('admin.product') }}">product management</a></li>
+    <li><a href="{{ route('admin.category') }}">category management</a></li>
+</ul>

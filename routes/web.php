@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+//bo sung
+use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Route namespace
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('user', [UserController::class, 'index'])->name('admin.user');
+
+    Route::get('product', [ProductController::class, 'index'])->name('admin.product');
+
+    Route::get('category', [CategoryController::class, 'index'])->name('admin.category');
+});
+
 
 Route::get('/', function () {
     return view('test');

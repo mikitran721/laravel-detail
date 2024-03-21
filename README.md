@@ -54,4 +54,24 @@
     ```php
     Route::pattern('bid', '[0-9a-z]+');
     ```
--   `Route with prefix`:
+-   `Route with prefix`: dùng để nhóm chung route
+
+```php
+//C1: Route::group(['prefix' => 'backend'], function () {
+//C2: Route::prefix('backend')->group(function () {
+Route::prefix('backend')->group(function () {
+    Route::get('user-management', function () {
+        return 'User management monitor';
+    })->name('backend.user');
+
+    Route::get('product-management', function () {
+        return 'Product management monitor';
+    })->name('backend.product');
+}
+```
+
+-   `Route namespace`: tránh lỗi `function callback` khi sử dụng php artisan optimize trong qt deploy = cách gọi route với controller
+    -   `php artisan make:controller Backend/UserController` sẽ auto tạo folder nếu chưa có
+    ```php
+    Route::get('user', 'UserController@index')->name('admin.user');
+    ```
