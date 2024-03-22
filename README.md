@@ -7,8 +7,19 @@
 -   luồng hoạt động:
     -   URI -> Routes -> Controller (load/hiển thị view, model - tương tác DB)
     -   view(): hàm load view
+-   Hien thi danh sach Routes dang su dung:
+    -   `php artisan route:list`
 
 ## ROUTES:
+
+### Resource Route:
+
+-   7 default methods: index() ~ list; create(); store() ~ tao ban ghi moi; edit() - man hinh edit; update() - luu cap nhat/user press submit; show() - detail; destroy() - xoa du lieu;
+-   muc dich: chuan hoa lai cac method tuong ung tung chuc nang cho 1 object.
+-   syntax: `php artisan make:controller UserController --resource`
+-   De bo cac controllerMethod ko can thiet, tai route page config nhu sau:
+    -   `Route::resource('user', UserController::class)->except(['create', 'edit']);`
+    -   `Route::resource('user', UserController::class)->only(['index']);`
 
 ### Another Route:
 

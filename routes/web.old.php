@@ -17,14 +17,6 @@ use App\Http\Controllers\Backend\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('test');
-});
-
-//resource controller
-// Route::resource('user', UserController::class)->except(['create', 'edit']);
-Route::resource('user', UserController::class)->only(['index', 'create']);
-/*
 // Route namespace
 Route::group(['prefix' => 'admin'], function () {
     Route::get('user', [UserController::class, 'index'])->name('admin.user');
@@ -40,7 +32,9 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 
-
+Route::get('/', function () {
+    return view('test');
+});
 Route::get('/test', function () {
     return 'Test Route Get';
 });
@@ -94,6 +88,4 @@ Route::prefix('backend')->group(function () {
     Route::get('category-management', function () {
         return 'Category management monitor';
     })->name('backend.category');
-    
 });
-*/

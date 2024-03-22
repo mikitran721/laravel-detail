@@ -7,26 +7,59 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        return 'List User';
+        return __METHOD__;
     }
 
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
-        return view('backend.user.create');
+        return __METHOD__;
     }
 
-    //method for POST
-    public function store(Request $req)
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
     {
-        dd(__METHOD__, $req->all());
-        return 'Store view - for POST';
+        //
     }
 
-    //method for PUT/PATCH
-    public function update(Request $req)
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
     {
-        dd(__METHOD__, $req->all());
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }
