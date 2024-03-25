@@ -18,7 +18,7 @@ use App\Http\Controllers\Backend\UserController;
 */
 
 Route::get('/', function () {
-    return view('test');
+    return view('welcome');
 });
 
 //resource controller

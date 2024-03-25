@@ -10,6 +10,13 @@
 -   Hien thi danh sach Routes dang su dung:
     -   `php artisan route:list`
 
+## COMPONENT
+
+-   cách tạo component; cách sd;
+-   cơ chế quản lý data
+-   truyền dữ liệu từ bên ngoài vào/ra
+-   custom lại
+
 ## ROUTES:
 
 ### Resource Route:
